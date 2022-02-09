@@ -43,6 +43,7 @@ jobs:
         shell: powershell
         run: |
           cd ConsoleCoreApp
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"vikramfullstack_dotnetcoreapp" /o:"vikramfullstack" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet-sonarscanner begin /k:"vikramfullstack_dotnetcoreapp" /o:"vikramfullstack" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet restore
           dotnet build
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
