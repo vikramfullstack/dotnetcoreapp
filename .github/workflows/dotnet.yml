@@ -18,6 +18,6 @@ jobs:
       with:
         dotnet-version: 3.0.x
     - name: change dir
-      run: cd ConsoleCoreApp
+      run: cd ConsoleCoreApp/ConsoleCoreApp
     - name: Build
       run: dotnet build
