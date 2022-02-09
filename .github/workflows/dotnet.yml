@@ -26,5 +26,5 @@ jobs:
           cd ConsoleCoreTestApp
           dotnet restore
           dotnet build
-          dotenet test
+          dotnet test
           
