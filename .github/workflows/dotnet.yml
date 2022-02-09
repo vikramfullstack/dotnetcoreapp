@@ -17,7 +17,14 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: change dir
+    - name: Dev Project Build
       run: |
           cd ConsoleCoreApp
           dotnet build
+    - name: Test Project Build
+      run: |
+          cd ConsoleCoreTestApp
+          dotnet restore
+          dotnet build
+          dotenet test
+          
